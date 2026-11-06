@@ -1,0 +1,14 @@
+[
+  { "nombre": "Amoxicilina 250 mg", "principioActivo": "Amoxicilina", "presentacion": "Comprimidos", "especies": ["Perro", "Gato"], "indicaciones": "Infecciones bacterianas respiratorias, urinarias y de piel" },
+  { "nombre": "Amoxicilina + Ácido clavulánico 500 mg", "principioActivo": "Amoxicilina, ácido clavulánico", "presentacion": "Comprimidos", "especies": ["Perro", "Gato"], "indicaciones": "Infecciones de piel, tejidos blandos y periodontales" },
+  { "nombre": "Amoxicilina suspensión oral 50 mg/ml", "principioActivo": "Amoxicilina", "presentacion": "Suspensión oral", "especies": ["Perro", "Gato"], "indicaciones": "Infecciones bacterianas en animales pequeños" },
+  { "nombre": "Apoquel 3,6 mg", "principioActivo": "Oclacitinib", "presentacion": "Comprimidos", "especies": ["Perro"], "indicaciones": "Prurito asociado a dermatitis alérgica" },
+  { "nombre": "Bravecto 500 mg", "principioActivo": "Fluralaner", "presentacion": "Comprimido masticable", "especies": ["Perro"], "indicaciones": "Tratamiento y prevención de pulgas y garrapatas" },
+  { "nombre": "Drontal Plus", "principioActivo": "Praziquantel, pirantel, febantel", "presentacion": "Comprimidos", "especies": ["Perro"], "indicaciones": "Desparasitación interna" },
+  { "nombre": "Meloxicam 1,5 mg/ml", "principioActivo": "Meloxicam", "presentacion": "Suspensión oral", "especies": ["Perro"], "indicaciones": "Dolor e inflamación musculoesquelética" },
+  { "nombre": "Metoclopramida 10 mg", "principioActivo": "Metoclopramida", "presentacion": "Comprimidos", "especies": ["Perro", "Gato"], "indicaciones": "Vómitos y trastornos de la motilidad gástrica" },
+  { "nombre": "Metronidazol 250 mg", "principioActivo": "Metronidazol", "presentacion": "Comprimidos", "especies": ["Perro", "Gato"], "indicaciones": "Diarreas e infecciones por anaerobios y protozoos" },
+  { "nombre": "Otomax", "principioActivo": "Gentamicina, betametasona, clotrimazol", "presentacion": "Suspensión ótica", "especies": ["Perro"], "indicaciones": "Otitis externa aguda y crónica" },
+  { "nombre": "Prednisolona 5 mg", "principioActivo": "Prednisolona", "presentacion": "Comprimidos", "especies": ["Perro", "Gato"], "indicaciones": "Procesos inflamatorios y alérgicos" },
+  { "nombre": "Shampoo de clorhexidina 2%", "principioActivo": "Clorhexidina", "presentacion": "Shampoo", "especies": ["Perro", "Gato"], "indicaciones": "Dermatitis bacterianas y fúngicas" }
+]

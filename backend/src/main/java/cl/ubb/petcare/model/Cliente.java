@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "clientes")
@@ -18,10 +20,12 @@ public class Cliente {
     private Long id;
 
     @NotBlank
+    @Pattern(regexp = "^\\d{1,2}\\.?\\d{3}\\.?\\d{3}-[\\dkK]$", message = "debe tener el formato 12.345.678-9")
     @Column(nullable = false, unique = true, length = 12)
     private String rut;
 
     @NotBlank
+    @Size(max = 150)
     @Column(nullable = false, length = 150)
     private String nombre;
 
@@ -30,9 +34,11 @@ public class Cliente {
     @Column(nullable = false, length = 150)
     private String correo;
 
+    @Size(max = 20)
     @Column(length = 20)
     private String telefono;
 
+    @Size(max = 200)
     @Column(length = 200)
     private String direccion;
 

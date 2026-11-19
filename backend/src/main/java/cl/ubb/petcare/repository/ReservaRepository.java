@@ -7,4 +7,8 @@ import cl.ubb.petcare.model.Reserva;
 
 @Repository
 public interface ReservaRepository extends JpaRepository<Reserva, Long> {
+
+    boolean existsByMascotaId(Long mascotaId);
+
+    boolean existsByMascotaClienteId(Long clienteId);
 }

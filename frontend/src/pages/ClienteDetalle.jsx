@@ -57,7 +57,10 @@ export default function ClienteDetalle() {
           <h1>{cliente.nombre}</h1>
           <p className="subtitulo">RUT {cliente.rut}</p>
         </div>
-        <button className="boton" onClick={() => setEditandoCliente(true)}>Editar cliente</button>
+        <div style={{ display: 'flex', gap: 10 }}>
+          <button className="boton" onClick={() => setEditandoCliente(true)}>Editar cliente</button>
+          <Link className="boton boton-primario" to={`/reservas/nueva?clienteId=${cliente.id}`}>Solicitar hora</Link>
+        </div>
       </div>
 
       <div className="tarjeta tarjeta-relleno datos">

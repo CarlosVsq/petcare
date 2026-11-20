@@ -1,7 +1,11 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
 const ENLACES = [
+  { ruta: '/reservas', texto: 'Reservas', icono: '📅' },
+  { ruta: '/reservas/nueva', texto: 'Nueva reserva', icono: '➕' },
   { ruta: '/clientes', texto: 'Clientes', icono: '👥' },
+  { ruta: '/veterinarios', texto: 'Veterinarios', icono: '🩺' },
+  { ruta: '/ubicacion', texto: 'Ubicación', icono: '📍' },
 ]
 
 export default function Layout() {

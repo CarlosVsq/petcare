@@ -306,6 +306,34 @@ textarea.entrada {
   margin-top: 20px;
 }
 
+.estado {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.estado-pendiente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.estado-confirmada {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.estado-cancelada {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.estado-atendida {
+  background: #dcfce7;
+  color: #166534;
+}
+
 .modal-fondo {
   position: fixed;
   inset: 0;
@@ -427,9 +455,60 @@ textarea.entrada {
   align-items: center;
 }
 
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.bloque {
+  border: 1px solid var(--borde-primario);
+  background: var(--primario-claro);
+  border-radius: 8px;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #115e59;
+  cursor: pointer;
+}
+
+.bloque:hover {
+  border-color: var(--primario);
+}
+
+.bloque small {
+  display: block;
+  font-weight: 500;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.bloque-seleccionado {
+  background: var(--primario);
+  border-color: var(--primario);
+  color: #fff;
+}
+
 .ayuda {
   color: var(--suave);
   font-size: 13px;
+}
+
+.medicamento {
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.medicamento-cabecera {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
 }
 
 .atencion {
@@ -456,6 +535,55 @@ textarea.entrada {
 .atencion table th,
 .atencion table td {
   padding: 7px 10px;
+}
+
+.veterinarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.horario-dia {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.horario-dia:last-child {
+  border-bottom: none;
+}
+
+.mapa-pagina {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 18px;
+  min-height: 520px;
+}
+
+.mapa {
+  min-height: 520px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+}
+
+.lista-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.etiqueta-api {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #6d28d9;
+  background: #ede9fe;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  vertical-align: middle;
 }
 
 @media (max-width: 900px) {
@@ -491,7 +619,8 @@ textarea.entrada {
   .rejilla-2,
   .rejilla-3,
   .rejilla-4,
-  .datos {
+  .datos,
+  .mapa-pagina {
     grid-template-columns: 1fr;
   }
 

@@ -1,9 +1,9 @@
 INSERT INTO clientes (rut, nombre, correo, telefono, direccion) VALUES
-('12.345.678-5', 'María González Pérez', 'maria.gonzalez@gmail.com', '+56 9 8765 4321', 'Av. Collao 1202, Concepción'),
-('15.678.234-K', 'Juan Muñoz Soto', 'jmunoz@outlook.com', '+56 9 7123 4567', 'O''Higgins 450, Concepción'),
-('18.234.567-2', 'Camila Rojas Díaz', 'camila.rojas@gmail.com', '+56 9 6234 5678', 'Colón 3300, Talcahuano'),
-('9.876.543-1', 'Pedro Fuentes Vera', 'pfuentes@empresa.cl', '+56 9 5345 6789', 'Los Carrera 820, Chillán'),
-('20.123.456-7', 'Valentina Torres Lagos', 'vtorres@gmail.com', '+56 9 4456 7890', 'Av. Alemania 150, Los Ángeles');
+('12.345.678-5', 'María González Pérez', 'maria.gonzalez@example.com', '+56 9 8765 4321', 'Av. Collao 1202, Concepción'),
+('15.678.234-K', 'Juan Muñoz Soto', 'jmunoz@example.com', '+56 9 7123 4567', 'O''Higgins 450, Concepción'),
+('18.234.567-2', 'Camila Rojas Díaz', 'camila.rojas@example.com', '+56 9 6234 5678', 'Colón 3300, Talcahuano'),
+('9.876.543-1', 'Pedro Fuentes Vera', 'pfuentes@example.com', '+56 9 5345 6789', 'Los Carrera 820, Chillán'),
+('20.123.456-7', 'Valentina Torres Lagos', 'vtorres@example.com', '+56 9 4456 7890', 'Av. Alemania 150, Los Ángeles');
 
 INSERT INTO mascotas (cliente_id, nombre, especie, raza, fecha_nacimiento, peso) VALUES
 (1, 'Luna', 'Perro', 'Labrador', '2021-03-14', 24.50),
@@ -39,11 +39,11 @@ INSERT INTO reservas (mascota_id, veterinario_id, fecha, hora, motivo, estado) V
 (1, 1, '2026-06-04', '10:00', 'Vómitos y decaimiento', 'ATENDIDA'),
 (3, 1, '2026-10-19', '09:30', 'Vacuna antirrábica', 'ATENDIDA'),
 (4, 2, '2026-10-28', '11:00', 'Caída de pelo', 'ATENDIDA'),
-(1, 2, '2026-11-23', '10:00', 'Control anual y vacunas', 'CONFIRMADA'),
-(7, 1, '2026-11-23', '10:00', 'Dolor en pata trasera', 'PENDIENTE'),
-(4, 2, '2026-11-23', '11:30', 'Revisión dermatológica', 'PENDIENTE'),
-(8, 2, '2026-11-23', '12:00', 'Control post operatorio', 'CANCELADA'),
-(6, 3, '2026-11-24', '09:00', 'Evaluación prequirúrgica', 'CONFIRMADA');
+(1, 2, (date_trunc('week', CURRENT_DATE) + INTERVAL '7 days')::date, '10:00', 'Control anual y vacunas', 'CONFIRMADA'),
+(7, 1, (date_trunc('week', CURRENT_DATE) + INTERVAL '7 days')::date, '10:00', 'Dolor en pata trasera', 'PENDIENTE'),
+(4, 2, (date_trunc('week', CURRENT_DATE) + INTERVAL '7 days')::date, '11:30', 'Revisión dermatológica', 'PENDIENTE'),
+(8, 2, (date_trunc('week', CURRENT_DATE) + INTERVAL '7 days')::date, '12:00', 'Control post operatorio', 'CANCELADA'),
+(6, 3, (date_trunc('week', CURRENT_DATE) + INTERVAL '8 days')::date, '09:00', 'Evaluación prequirúrgica', 'CONFIRMADA');
 
 INSERT INTO atenciones (reserva_id, diagnostico, observaciones) VALUES
 (1, 'Gastroenteritis leve', 'Dieta blanda por 3 días'),

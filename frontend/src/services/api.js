@@ -50,3 +50,24 @@ export const mascotasApi = {
   eliminar: (id) => solicitar(`/mascotas/${id}`, { method: 'DELETE' }),
   historial: (id) => solicitar(`/mascotas/${id}/historial`),
 }
+
+export const veterinariosApi = {
+  listar: () => solicitar('/veterinarios'),
+  disponibilidad: (id, fecha) => solicitar(`/veterinarios/${id}/disponibilidad`, { params: { fecha } }),
+}
+
+export const reservasApi = {
+  listar: (filtros) => solicitar('/reservas', { params: filtros }),
+  crear: (reserva) => solicitar('/reservas', { method: 'POST', body: reserva }),
+  modificar: (id, reserva) => solicitar(`/reservas/${id}`, { method: 'PUT', body: reserva }),
+  cambiarEstado: (id, estado) => solicitar(`/reservas/${id}/estado`, { method: 'PATCH', body: { estado } }),
+  registrarAtencion: (id, atencion) => solicitar(`/reservas/${id}/atencion`, { method: 'POST', body: atencion }),
+}
+
+export const medicamentosApi = {
+  buscar: (nombre) => solicitar('/medicamentos', { params: { nombre } }),
+}
+
+export const clinicaApi = {
+  ubicacion: () => solicitar('/clinica/ubicacion'),
+}

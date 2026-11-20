@@ -1,5 +1,7 @@
 package cl.ubb.petcare.model;
 
+import java.time.LocalDate;
+
 public enum DiaSemana {
     LUNES,
     MARTES,
@@ -7,5 +9,9 @@ public enum DiaSemana {
     JUEVES,
     VIERNES,
     SABADO,
-    DOMINGO
+    DOMINGO;
+
+    public static DiaSemana desde(LocalDate fecha) {
+        return values()[fecha.getDayOfWeek().getValue() - 1];
+    }
 }
